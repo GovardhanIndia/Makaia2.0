@@ -282,9 +282,23 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 
 	}
 
+
 	public void waitBeforeClickingAnElement(WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
+public void VerifyCurrentUrl();
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
