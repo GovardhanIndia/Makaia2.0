@@ -286,5 +286,19 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
+	
+	public void verifyCurrentURL(String title) {
+		try {
+			if(driver.getTitle().contains(title)) {
+				reportSteps("The Title of the URL Matches", "Pass");
+			}else {
+				reportSteps("The Title of the URL Fails", "Fail");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		}
+	}
 
-}
