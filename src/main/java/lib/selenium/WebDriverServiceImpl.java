@@ -186,7 +186,7 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 			reportSteps("The " + expectedText + " is not available", "Fail");
 
 	}
-	
+
 	public void verifyPartialText(WebElement ele, String expectedText) {
 		// TODO Auto-generated method stub
 		if (ele.getText().contains(expectedText)) {
@@ -282,11 +282,13 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 
 	}
 
+
 	public void waitBeforeClickingAnElement(WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
-	
+
+
 	public void verifyCurrentURL(String title) {
 		try {
 			if(driver.getTitle().contains(title)) {
@@ -298,7 +300,21 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
-		}
+
 	}
+
+	public void VerifyCurrentUrl() {
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
