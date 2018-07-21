@@ -14,8 +14,8 @@
 	<test name="CreateAndDelete" >
 		<classes>
 			<class name="tests.CreateLead" />
-			<class name="tests.EditLead" />
-			<class name="tests.DuplicateLead"/>
+			<!-- <class name="tests.EditLead" />
+			<class name="tests.DuplicateLead"/> -->
 			<!-- <class name="tests.CreateLead2" /> -->
 		</classes>
 	</test> <!-- CreateAndDelete -->
