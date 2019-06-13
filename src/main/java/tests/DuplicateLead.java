@@ -1,14 +1,9 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import lib.selenium.PreAndPost;
-import lib.selenium.WebDriverServiceImpl;
 import pages.FindLeads;
 import pages.MyHome;
 
@@ -27,14 +22,15 @@ public class DuplicateLead extends PreAndPost {
 	@Test(dataProvider = "Test")
 	public void duplicate(String eMail, String sectionHeader) throws InterruptedException {
 		
-		 FindLeads objFL = new MyHome(driver, test)
-		.clickOnLeads()
+		String firstName = new MyHome(driver, test).clickOnLeads()
 		.clickOnFindLeads()
 		.clickOnEmailTab()
 		.typeEmailId(eMail)
-		.clickFindLeads();
-		String firstName = objFL.getFirstName();
-		objFL.clickLeadId()
+		.clickFindLeads()
+		.getFirstName();
+		
+		new FindLeads(driver, test)
+		.clickLeadId()
 		.clickDuplicate()
 		.validateSectionHeader(sectionHeader)
 		.clickOnCreateLead()

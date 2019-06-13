@@ -1,5 +1,8 @@
 package pages;
 
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -44,6 +47,8 @@ public class CreateLead extends PreAndPost  {
 	
 	public CreateLead typeFirstName(String firstName ) {
 		type(eleFirstName, firstName);
+		File src = driver.getScreenshotAs(OutputType.FILE);
+		
 		return this;
 	}
 	

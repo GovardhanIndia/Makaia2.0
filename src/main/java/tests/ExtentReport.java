@@ -21,7 +21,6 @@ public class ExtentReport {
 		test.pass("The Data Entered Successfully", MediaEntityBuilder.createScreenCaptureFromPath("./../snaps/snap1.jpg").build());
 		test.fail("Password Entered");
 		test.pass("login button Clicked");
-		extent.flush();
-		
+		extent.flush();			
 	}
 }
